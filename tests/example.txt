@@ -1,0 +1,15 @@
+# The main context
+# Comment line starts with "#"
+# Indents doesn't matter
+# Empty strings doesn't matter
+
+single_directive;
+single_directive_with_parameters one two three;
+
+block_directive param1 param2 {
+    # Nested context
+    nested_single_directive;
+    nested_block_directive {
+        nested_nested_single_directive param;
+    }
+}
