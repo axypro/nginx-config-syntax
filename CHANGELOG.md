@@ -1,6 +1,7 @@
 ## dev-master
 
 * `DirectiveWithoutParams`
+* `DirectiveSingleParam`
 
 ## 0.1.1 (12 June 2021)
 
