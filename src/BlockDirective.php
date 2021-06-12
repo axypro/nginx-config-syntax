@@ -14,15 +14,13 @@ abstract class BlockDirective extends BaseDirective
     {
         parent::__construct();
         $this->context = new DirectiveContext();
-        $this->topContext = new DirectiveContext();
-        $this->mainContext = new DirectiveContext();
-        $this->context->append($this->topContext);
-        $this->context->append($this->mainContext);
+        $this->topContext = $this->context->append(new DirectiveContext());
+        $this->mainContext = $this->context->append(new DirectiveContext());
     }
 
-    public function append(mixed $item): void
+    public function append(mixed $item): mixed
     {
-        $this->context->append($item);
+        return $this->context->append($item);
     }
 
     protected function getSuffix(): string
