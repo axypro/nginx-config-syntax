@@ -33,8 +33,11 @@ abstract class BaseItem
         if (!$this->amIEnabled) {
             return '';
         }
-        $result = (string)$this->draw();
-        return $this->comment->draw($result);
+        $result = $this->draw();
+        if ($result === null) {
+            return '';
+        }
+        return $this->comment->draw((string)$result);
     }
 
     /**

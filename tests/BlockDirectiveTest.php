@@ -59,6 +59,7 @@ class BlockDirectiveTest extends BaseTestCase
                 return null;
             }
         };
+        $directive->comment->set('Test');
         $directive->append('one');
         $this->assertSame('', (string)$directive);
     }
