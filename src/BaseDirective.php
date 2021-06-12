@@ -6,16 +6,19 @@ namespace axy\nginx\config\syntax;
 
 abstract class BaseDirective extends BaseItem
 {
-    abstract public function getName(): string;
+    abstract public function getName(): ?string;
 
     public function getParams(): string|array|null
     {
         return [];
     }
 
-    protected function getPrefix(): string
+    protected function getPrefix(): ?string
     {
         $result = $this->getName();
+        if ($result === null) {
+            return null;
+        }
         $params = $this->getParams();
         if (is_array($params)) {
             foreach ($params as &$p) {
@@ -37,8 +40,12 @@ abstract class BaseDirective extends BaseItem
 
     protected function draw(): ?string
     {
+        $prefix = $this->getPrefix();
+        if ($prefix === null) {
+            return null;
+        }
         return implode('', [
-            $this->getPrefix(),
+            $prefix,
             $this->getSuffix(),
         ]);
     }

@@ -6,12 +6,12 @@ namespace axy\nginx\config\syntax;
 
 class CustomSingleDirective extends SingleDirective
 {
-    public function __construct(protected string $name, public string|array|null $params = [])
+    public function __construct(protected ?string $name, public string|array|null $params = [])
     {
         parent::__construct();
     }
 
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }

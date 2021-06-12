@@ -14,12 +14,12 @@ class Context extends BaseContext
         return $item;
     }
 
-    public function single(string $name, string|array|null $params = []): CustomSingleDirective
+    public function single(?string $name, string|array|null $params = []): CustomSingleDirective
     {
         return $this->append(new CustomSingleDirective($name, $params));
     }
 
-    public function block(string $name, string|array|null $params = []): CustomBlockDirective
+    public function block(?string $name, string|array|null $params = []): CustomBlockDirective
     {
         return $this->append(new CustomBlockDirective($name, $params));
     }

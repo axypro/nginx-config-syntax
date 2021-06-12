@@ -12,7 +12,7 @@ class BlockDirectiveTest extends BaseTestCase
     {
         $directive = new class () extends BlockDirective
         {
-            public function getName(): string
+            public function getName(): ?string
             {
                 return 'test';
             }
@@ -48,5 +48,18 @@ class BlockDirectiveTest extends BaseTestCase
             '}',
         ]);
         $this->assertSame($expected, (string)$directive);
+    }
+
+    public function testNoName(): void
+    {
+        $directive = new class () extends BlockDirective
+        {
+            public function getName(): ?string
+            {
+                return null;
+            }
+        };
+        $directive->append('one');
+        $this->assertSame('', (string)$directive);
     }
 }
