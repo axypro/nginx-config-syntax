@@ -1,5 +1,7 @@
 ## dev-master
 
+* `DirectiveWithoutParams`
+
 ## 0.1.1 (12 June 2021)
 
 * #2: `append($item)` methods return `$item` for chains
