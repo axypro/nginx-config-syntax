@@ -6,5 +6,4 @@ namespace axy\nginx\config\syntax;
 
 abstract class DirectiveWithoutParams extends FixedDirective
 {
-    protected string $name;
 }

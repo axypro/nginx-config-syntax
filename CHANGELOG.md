@@ -2,6 +2,7 @@
 
 * `DirectiveWithoutParams`
 * `DirectiveSingleParam`
+* `DirectiveMultiParams`
 
 ## 0.1.1 (12 June 2021)
 
