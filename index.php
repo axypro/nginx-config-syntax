@@ -7,7 +7,11 @@
  * @license https://raw.github.com/axypro/nginx-config-syntax/master/LICENSE MIT
  * @link https://github.com/axypro/nginx-config-syntax repository
  * @link https://github.com/axypro/nginx-config-syntax/blob/master/README.md documentation
- * @uses PHP8+
+ * @uses PHP8.1+
  */
+
+declare(strict_types=1);
+
+namespace axy\nginx\config\syntax;
 
 require_once __DIR__ . '/vendor/autoload.php';

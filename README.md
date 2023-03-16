@@ -1,7 +1,9 @@
 # axy\nginx\config\syntax
 
 [![Latest Stable Version](https://img.shields.io/packagist/v/axy/nginx-config-syntax.svg?style=flat-square)](https://packagist.org/packages/axy/nginx-config-syntax)
-[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%208.0-8892BF.svg?style=flat-square)](https://php.net/)
+[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%208.1-8892BF.svg?style=flat-square)](https://php.net/)
+[![Tests](https://github.com/axypro/nginx-config-syntax/actions/workflows/test.yml/badge.svg)](https://github.com/axypro/nginx-config-syntax/actions/workflows/test.yml)
+[![Coverage Status](https://coveralls.io/repos/github/axypro/nginx-config-syntax/badge.svg?branch=master)](https://coveralls.io/github/axypro/nginx-config-syntax?branch=master)
 [![License](https://poser.pugx.org/axy/nginx-config-syntax/license)](LICENSE)
 
 Builds a file with syntax similar to nginx config.
@@ -61,8 +63,7 @@ $nested = $block->context->block('nested_block_directive');
 $nested->context->single('nested_nested_single_directive', 'param');
 $block->context->comment->set('Nested context');
 
-$expected = rtrim(file_get_contents(__DIR__ . '/example.txt')) . "\n";
-$this->assertSame($expected, $main->render());
+echo $main->render();
 ```
 
 Result is the text from "syntax" section.

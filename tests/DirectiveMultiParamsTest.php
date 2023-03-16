@@ -34,7 +34,7 @@ class DirectiveMultiParamsTest extends BaseTestCase
         }
     }
 
-    public function providerToString(): array
+    public static function providerToString(): array
     {
         return [
             'yes' => [true],

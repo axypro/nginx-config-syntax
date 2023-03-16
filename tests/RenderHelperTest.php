@@ -20,7 +20,7 @@ class RenderHelperTest extends BaseTestCase
         $this->assertSame($expected, RenderHelper::format(...$args));
     }
 
-    public function providerFormat(): array
+    public static function providerFormat(): array
     {
         $text = implode("\n", [
             '# Test config file',
@@ -142,10 +142,7 @@ class RenderHelperTest extends BaseTestCase
         $this->assertSame($expected, RenderHelper::escapeParam($param));
     }
 
-    /**
-     * @return array
-     */
-    public function providerEscapeParam(): array
+    public static function providerEscapeParam(): array
     {
         return [
             ['string', 'string'],

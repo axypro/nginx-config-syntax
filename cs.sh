@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
+# Checks code style.
+# Arguments and options are equal to phpcs.
+# Without arguments checks /src/ and /tests/ directories.
+# Host script that executes internal script (inside docker container)
 
-CMD="/var/www/app/tests/devops/scripts/cs.sh $*"
+. "$(dirname "$0")/docker/scripts/boot_host.sh"
 
-cd $(dirname "$0")/tests/devops \
-&& docker-compose build \
-&& docker-compose run --rm php /bin/sh -c "$CMD"
+docker-compose run -T --rm php /bin/sh /app/docker/scripts/cs.sh "$@"

@@ -1,5 +1,8 @@
 ## dev-master
 
+* Up minimal PHP to 8.1
+* Dev: refactoring structure
+
 ## 0.1.2 (12 June 2021)
 
 * `DirectiveWithoutParams`

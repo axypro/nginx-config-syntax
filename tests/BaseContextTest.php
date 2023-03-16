@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace axy\nginx\config\syntax\tests;
 
 use axy\nginx\config\syntax\BaseContext;
-use axy\nginx\config\syntax\Comment;
 
 class BaseContextTest extends BaseTestCase
 {
