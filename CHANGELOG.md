@@ -1,4 +1,4 @@
-## dev-master
+## 0.2.0 (16.03.2023)
 
 * Up minimal PHP to 8.1
 * Dev: refactoring structure
